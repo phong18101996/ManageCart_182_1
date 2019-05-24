@@ -1,0 +1,60 @@
+.navbar-default {
+    background-color: white !important;
+    border-color: white !important;
+}
+.header {
+    padding: 0px 20px ;
+    text-decoration: none;
+    color:black;
+    font-size: 20px;
+}
+.header:hover {
+    text-decoration: none;
+    color:black;
+}
+.w3-third h3 {
+    padding-left: 16px;
+}
+.add-cart {
+    color:red;
+}
+.add-cart:hover {
+    color:red;
+    text-decoration: none;
+}
+#about {
+    border-top:1px solid black !important;
+}
+
+.login-div-parent  .form-login {
+   position: absolute;
+    left:43%;
+    width: 245px;
+}
+.main-div-login {
+    margin-bottom: 200px;
+}
+.w3-text-black b {
+    padding:5px 15px;
+}
+ .w3-input {
+    margin:5px 5px;
+}
+ .w3-padding-16 {
+     padding-bottom: 60px !important;
+ }
+ .w3-btn {
+     margin-top: 10px;
+ }
+ .main-div-register {
+     margin-bottom: 400px;
+ }
+ .w3-button {
+     margin-left: 6px;
+ }
+ .w3-dropdown-hover {
+     background-color: white !important;
+ }
+ .w3-dropdown-content {
+     padding-right: 10px;
+ }

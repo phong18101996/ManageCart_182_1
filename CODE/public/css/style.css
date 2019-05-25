@@ -40,14 +40,18 @@
  .w3-input {
     margin:5px 5px;
 }
- .w3-padding-16 {
-     padding-bottom: 60px !important;
- }
+ /*.w3-padding-16 {*/
+     /*padding-bottom: 60px !important;*/
+ /*}*/
  .w3-btn {
      margin-top: 10px;
  }
  .main-div-register {
-     margin-bottom: 400px;
+     margin-bottom: 450px;
+ }
+
+ .main-div-login {
+     min-height: 140px;
  }
  .w3-button {
      margin-left: 6px;
@@ -58,3 +62,22 @@
  .w3-dropdown-content {
      padding-right: 10px;
  }
+ .padding-slider {
+    padding-right: 70px;
+ }
+.slick-arrow {
+   background-image: none;
+    border: none !important;
+}
+#slick_slider {
+    max-height: 500px;
+}
+#slick_slider2 {
+    max-height: 500px;
+}
+.fa-arrow-left  {
+    font-size: 20px !important;
+}
+.fa-arrow-right {
+    font-size: 20px !important;
+}

@@ -60,7 +60,27 @@
     function w3_close() {
         document.getElementById("mySidebar").style.display = "none";
     }
+
 </script>
 <script type="text/javascript" src="{{URL::asset('js/jquery-3.3.1.min.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('js/bootstrap.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+<script>
+    $('#slick_slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        prevArrow: $("#slick-btn-prev"),
+        nextArrow: $("#slick-btn-next")
+    });
+    $('#slick_slider2').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        prevArrow: $("#slick-btn-prev2"),
+        nextArrow: $("#slick-btn-next2")
+    });
+</script>

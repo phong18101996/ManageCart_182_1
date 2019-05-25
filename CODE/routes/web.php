@@ -25,3 +25,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('layouts/register');
 });
+
+Route::get('/san-pham', function () {
+    return view('layouts/products');
+});

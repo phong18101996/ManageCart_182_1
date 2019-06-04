@@ -9,13 +9,13 @@
     font-size: 20px;
 }
 .header:hover {
-    text-decoration: none;
+    text-decoration: black;
     color:black;
 }
 .w3-third h3 {
     padding-left: 16px;
 }
-.add-cart {
+.add-to-cart {
     color:red;
 }
 .add-cart:hover {
@@ -32,7 +32,7 @@
     width: 245px;
 }
 .main-div-login {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 .w3-text-black b {
     padding:5px 15px;
@@ -40,14 +40,12 @@
  .w3-input {
     margin:5px 5px;
 }
- /*.w3-padding-16 {*/
-     /*padding-bottom: 60px !important;*/
- /*}*/
+
  .w3-btn {
      margin-top: 10px;
  }
- .main-div-register {
-     margin-bottom: 450px;
+.w3-center .main-div-register {
+     margin-bottom: 630px !important;
  }
 
  .main-div-login {
@@ -62,6 +60,18 @@
  .w3-dropdown-content {
      padding-right: 10px;
  }
+ .bannel-dropdown {
+    /*margin-left: 60px;*/
+     padding:10px;
+ }
+ .dropdown-iterms {
+     padding:0px !important;
+     font-size: 17px;
+ }
+.dropdown-iterms:hover {
+   background-color: white !important;
+}
+
  .padding-slider {
     padding-right: 70px;
  }
@@ -69,7 +79,7 @@
    background-image: none;
     border: none !important;
 }
-#slick_slider {
+#slick_slider1 {
     max-height: 500px;
 }
 #slick_slider2 {
@@ -80,4 +90,8 @@
 }
 .fa-arrow-right {
     font-size: 20px !important;
+}
+/*pagination*/
+.w3-center .w3-quarter a {
+    color:red !important;
 }

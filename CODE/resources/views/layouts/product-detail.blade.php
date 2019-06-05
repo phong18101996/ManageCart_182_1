@@ -33,14 +33,9 @@
 
             <h3><p class="w3-myfont">Tên : </p>{{$detail->tensp}}</h3>
             <h3><p class="w3-myfont">Giá : </p>{{$detail->giasp}}.000 VND</h3>
-            <h3><p class="w3-myfont">Số Lượng : </p>
-                <select>
-                    <option value="1">1</option>
-                    <option value="1">2</option>
-                    <option value="1">3</option>
-                    <option value="1">4</option>
-                </select>
-            </h3>
+            {{--<h3><p class="w3-myfont">Số Lượng : </p>--}}
+                {{--<input type="number" class="detail-to-add" value="" style="width: 50px" min="1">--}}
+            {{--</h3>--}}
             <h3>
                 <a href="{!! url('mua-hang',[$detail->code]) !!}" class="add-to-cart" >
 

@@ -57,13 +57,14 @@ public function muahang($id)
 
 //   dd($content);
     return redirect()->back()
-        ->with(['flag-cart'=>'success','alert-cart'=>'Sản phẩm đã được thêm vào giỏ hàng'])
+        ->with(['flag-cart'=>'success','alert-cart'=>'Sản phẩm đã được thêm vào giỏ hàng .  '])
         ->with('content',$content);
 }
 public function giohang()
 {
     $content = Cart::content();
-    $total = Cart::total();
+    $total = Cart::subtotal();
+
 
     return view('layouts/cart',compact('content','total'));
 
@@ -73,15 +74,17 @@ public function xoasanpham($id)
     Cart::remove($id);
     return redirect()->back();
 }
-public function capnhat(Request $rq)
+public function capnhat(Request $request )
 {
 
 
-        $rowid=$rq->id;
-        $qty=$rq->qty;
+        $rowid=$request->id;
+        $qty=$request->qty;
+//        $proid = $request->id;
 //        $id = Request::get('id');
 //        $qty =Request::input('qty');
         Cart::update($rowid,$qty);
+        return redirect()->back();
 
 
 

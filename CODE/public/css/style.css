@@ -16,10 +16,10 @@
     padding-left: 16px;
 }
 .add-to-cart {
-    color:red;
+    color:#c0392b;
 }
 .add-cart:hover {
-    color:red;
+    color:#c0392b;
     text-decoration: none;
 }
 #about {
@@ -91,7 +91,5 @@
 .fa-arrow-right {
     font-size: 20px !important;
 }
-/*pagination*/
-.w3-center .w3-quarter a {
-    color:red !important;
-}
+
+

@@ -101,10 +101,14 @@
                     type:'GET',
                     dataType:'html',
                     url:'cap-nhat/'+rowid+'/'+ qty,
+
                     // data:"_token"+ token + "qty=" + newqty + '&rowid=' + rowid + '&proid' + proid ,
                     data:{"_token":token,"id":rowid,"qty":qty},
                     success:function (response) {
                         console.log(response);
+                    }
+                    ,error:function(){
+                        alert("error!!!!");
                     }
                 })
             }

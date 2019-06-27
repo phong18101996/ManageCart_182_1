@@ -1,13 +1,15 @@
 <?php
 
 namespace App;
-
+use DB;
 use Illuminate\Database\Eloquent\Model;
 
 class Cart extends Model
 {
-    public function add()
+    protected $table = 'cart';
+    public static function dataCart()
     {
-        return $this->belongsTo(Cart::class);
+        $value = DB::table('cart')->get();
+        return $value;
     }
 }

@@ -33,14 +33,21 @@
 
             <h3><p class="w3-myfont">Tên : </p>{{$detail->tensp}}</h3>
             <h3><p class="w3-myfont">Giá : </p>{{$detail->giasp}}.000 VND</h3>
-            {{--<h3><p class="w3-myfont">Số Lượng : </p>--}}
-                {{--<input type="number" class="detail-to-add" value="" style="width: 50px" min="1">--}}
-            {{--</h3>--}}
-            <h3>
-                <a href="{!! url('mua-hang',[$detail->code]) !!}" class="add-to-cart" >
+            <h3><p class="w3-myfont">Số Lượng : </p>
+                <form action="/mua-chi-tiet/{{$detail->code}}" method="post">
+                    {{ csrf_field() }}
+                <?php for($v=1;$v<=20;$v++) { ?>
+            <input type="number" name="detail" id="value-number"  value="<?php echo $v ; }?>" style="width: 50px" min="1" step="1">
+                    <button type="submit" class=" btn btn-danger" ><i class="icon-shopping-cart" style="padding: 5px"></i>Thêm Vào Giỏ</button>
+                </form>
 
-                    <i class="icon-shopping-cart"><p style="display:none">Cach</p>
-                    </i>Thêm Vào Giỏ</a>
+        </h3>
+            <h3>
+                {{--<a href="{!! url('mua-hang',[$detail->code]) !!}" class="add-to-cart" >--}}
+
+                    {{--<i class="icon-shopping-cart"><p style="display:none">Cach</p>--}}
+                    {{--</i>Thêm Vào Giỏ</a>--}}
+
             </h3>
 
     </div>
@@ -59,7 +66,9 @@
     <hr id="about">
 </div>
 @extends('layouts.footer')
-
+<script>
+        document.getElementById("value-number").defaultValue = "1";
+</script>
 
 </body>
 </html>

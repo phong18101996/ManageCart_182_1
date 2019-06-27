@@ -45,9 +45,12 @@ Route::get('logout','loginController@postLogout');         // xử lý đăng nh
 //shopping cart
 //Route::post('/cart', 'CartController@cart');
 Route::get('mua-hang/{id}',['as'=>'muahang','uses'=>'ProductsController@muahang']);
+Route::post('mua-hang/{id}',['as'=>'muahang','uses'=>'ProductsController@muahang']);
 Route::get('gio-hang',['as'=>'giohang','uses'=>'ProductsController@giohang']);
 Route::get('xoa-san-pham/{id}', ['as'=>'xoasanpham','uses'=>'ProductsController@xoasanpham']);
+Route::get('xoa-het','ProductsController@xoahet');
 Route::get('cap-nhat/{id}/{qty}',['as'=>'capnhat','uses'=>'ProductsController@capnhat']);
+Route::post('mua-chi-tiet/{id}','ProductsController@muahangtutrangchitiet');
 
 Route::get('/san-pham', function () {
     return view('layouts/products');

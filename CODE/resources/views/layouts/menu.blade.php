@@ -9,6 +9,7 @@
 <link href="{{URL::asset('css/style.css')}}" rel="stylesheet">
 <link href="{{URL::asset('css/bootstrap.css')}}" rel="stylesheet">
 <link href="{{URL::asset('css/bootstrap.min.css')}}" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
@@ -52,61 +53,51 @@
 
 
 
-
+                    {{--@if(Session::has('new_temp'))--}}
                     {{--<span class="badge">--}}
-                        {{--@if(!empty($content))--}}
-                            {{--@foreach($content as $qty)--}}
-                            {{--{{$qty->qty}}--}}
-                            {{--@endforeach--}}
-                            {{--@endif--}}
+                        {{--{{Session::get('new_temp')}}--}}
+
                     {{--</span>--}}
+                        {{--@endif--}}
+
+                    @if(!empty($temp))
+
+                    <span class="badge">
+                    {{$temp}}
+
+                    </span>
+
+                        @else
+
+                        <span class="badge">
+                            0
+
+                    </span>
+
+                    @endif
+
                 </a>
 
 
 
 
-                {{--<div class="w3-dropdown-content w3-bar-block w3-border">--}}
-                    {{--<div class="w3-bar-item w3-button dropdown-iterms">--}}
-                    {{--<table class="w3-table w3-bordered">--}}
-                        {{--<tr>--}}
-                       {{--<th>Tên</th>--}}
-                       {{--<th>Giá</th>--}}
-                       {{--<th>Số Lượng</th>--}}
-                        {{--</tr>--}}
-                        {{--@foreach($content as $item)--}}
-                        {{--<tr>--}}
-                            {{--<td>{{$item->name}}</td>--}}
-                            {{--<td>{{$item->price}}</td>--}}
-                            {{--<td>{{$item->qty}}</td>--}}
-                        {{--</tr>--}}
 
-
-                            {{--@endforeach--}}
-                    {{--</table>--}}
-                        {{----}}
-                    {{--</div>--}}
-                    {{--<a href="#" class="w3-bar-item w3-button dropdown-iterms"></a>--}}
-                    {{--<a href="#" class="w3-bar-item w3-button dropdown-iterms">Link 2</a>--}}
-                    {{--<a href="#" class="w3-bar-item w3-button dropdown-iterms">Link 3</a>--}}
-                {{--</div>--}}
-
-                {{--@else--}}
-                {{--<div class="w3-dropdown-content w3-bar-block w3-border">--}}
-                    {{--<p>Giỏ hàng bạn đang trống</p>--}}
-                {{--</div>--}}
-                    {{--@endif--}}
             </div>
 
         </div>
 
         @if(Auth::check())
+
         <div class="w3-right w3-padding-16 w3-wide">
 
                 <div class="w3-dropdown-hover">
+
                     <a href="" class="header" ><i class="icon-user"></i>{{Auth::user()->name}}</a>
+
                     <div class="w3-dropdown-content w3-bar-block w3-border bannel-dropdown">
                         <a href="logout" class="w3-bar-item w3-button dropdown-iterms">Quản Lý Tài Khoản</a>
                         <a href="logout" class="w3-bar-item w3-button dropdown-iterms">Đăng Xuất</a>
+                        <input type="hidden" value="{{Auth::user()->id}}" name="id_users">
 
                     </div>
                 </div>

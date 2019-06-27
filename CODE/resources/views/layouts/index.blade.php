@@ -47,16 +47,16 @@
     <h3 class="padding-slider">{{$product->tensp}}</h3>
     <h3 class="padding-slider">{{$product->giasp}}.000 VND</h3>
     <h4 class="padding-slider">
-        {{--<form method="post" action="{{url('cart')}}">--}}
-            {{--<input type="hidden" name="product_id" value="{{$product->code}}">--}}
-            {{--<input type="hidden" name="_token" value="{{ csrf_token() }}">--}}
-            {{--<button type="submit" class="btn btn-fefault add-to-cart">--}}
-                {{--<i class="fa fa-shopping-cart"></i>--}}
-                {{--Add to cart--}}
-            {{--</button>--}}
-        {{--</form>--}}
-        <a href="{!! url('mua-hang',[$product->code]) !!}" class="add-to-cart" >
-            <i class="icon-shopping-cart"><p style="display:none">Cach</p> </i>Thêm Vào Giỏ</a>
+
+        <form action="/mua-hang/{{$product->code}}" method="post">
+            {{ csrf_field() }}
+            <input type="hidden" value="{{$product->code}}">
+
+            <button type="submit" class="btn btn-danger">
+                <i class="icon-shopping-cart" style="padding: 5px"></i>
+                Thêm Vào Giỏ
+            </button>
+        </form>
     </h4>
     </div>
                 @endif

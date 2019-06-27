@@ -18,6 +18,10 @@
 .add-to-cart {
     color:#c0392b;
 }
+.add-to-cart:hover {
+    color:#c0392b;
+    text-decoration: none;
+}
 .add-cart:hover {
     color:#c0392b;
     text-decoration: none;

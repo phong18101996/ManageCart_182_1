@@ -3,6 +3,10 @@
 
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:120px">
     <hr id="about">
+
+
+
+
     @if(count($content)>0)
 
     <div class="w3-container">
@@ -21,12 +25,13 @@
 
             </tr>
                 <form method="post" action="">
-                    <input name="_token" type="hidden" value="{{ csrf_token()  }}">
+                    {{ csrf_field() }}
+                    {{--<input name="_token" type="hidden" value="{{ csrf_token()  }}">--}}
                     <?php $count=1;  ?>
                 @foreach($content as $vl)
 
             <tr>
-                {{--<td><a href="/id={{$vl->id}}"><img src="{{URL::asset($vl['option']['img'])}}"> </a></td>--}}
+                {{--<td><a href="/id={{$vl->id}}"><img src="{{URL::asset($vl->img)}}"> </a></td>--}}
                 {{--<td><a href="/id={{$vl->id}}"><img src="{URL::asset($vl['options']['img'])}"> </a></td>--}}
                 <td>{{$vl->name}}</td>
                 <td>{{$vl->price}}.000 VND</td>
@@ -52,7 +57,7 @@
                 <td></td>
                 <td></td>
                 <td><h4 style="color:black">Thành Tiền :<p style="color:red">{{$total}} 000 VND </p> </h4></td>
-                <td> </td>
+                <td> <a href="/xoa-het">Xóa Tất Cả</a> </td>
 
                 <td></td>
             </tr>
@@ -74,9 +79,14 @@
     @endif
        @if(count($content)==0)
             <div class="w3-container">
+                <div class="w3-row-padding w3-padding-16 w3-center">
+                    <img src="{{URL::asset('image/cart-empty.png')}}" alt="Sandwich" style="width:210px;height: 250px">
                 <h2>Giỏ hàng trống</h2>
+                    <h4><a href="/">Tiếp Tục Mua Sắm</a> </h4>
+                </div>
             </div>
         @endif
+
 
 
         {{--end content data cart--}}

@@ -17,6 +17,15 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
+        view()->composer('layouts/menu',function($view){
+            $content = Cart::content();
+            $temp=0;
+            foreach ($content as $v) {
+                $temp+=$v->qty;
+            }
+            $view->with('content',$content)
+            ->with('temp',$temp);
+        });
     }
 
     /**

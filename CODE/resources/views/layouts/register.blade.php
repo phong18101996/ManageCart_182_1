@@ -58,27 +58,28 @@
                 </div>
 
             </div>
-            @if(count($errors)>0)
-            <div class="w3-container w3-padding-32 w3-right">
-                <div class="form-row">
-                    @foreach($errors->all() as $err)
-                    <div class="alert alert-danger">
 
-                            {{$err}}
-
-                    </div>
-                    @endforeach
-                </div>
-
-
-
-
-            </div>
-            @endif
 
 
 
         </div>
+            @if(count($errors)>0)
+                <div class="w3-container w3-padding-32 w3-center">
+                    <div class="form-row">
+                        @foreach($errors->all() as $err)
+                            <div class="alert alert-danger">
+
+                                {{$err}}
+
+                            </div>
+                        @endforeach
+                    </div>
+
+
+
+
+                </div>
+            @endif
 
 
     </div>

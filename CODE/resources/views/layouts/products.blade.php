@@ -35,7 +35,7 @@
 <a href="/id={{$products->code}}">
 <img src="{{URL::asset($products->hinh)}}" alt="Sandwich" style="width:210px;height: 250px">
 </a>
-<h4><a href="/chi-tiet" class="header">{{$products->tensp}}</a> </h4>
+<h4><a href="" class="header">{{$products->tensp}}</a> </h4>
 <h3>{{$products->giasp}}.000 VND</h3>
 <h4>
     {{--<a href="{!! url('mua-hang',[$products->code]) !!}" class="add-to-cart" >--}}

@@ -25,8 +25,22 @@ class ProductsController extends Controller
         $valueProducts = Products::DataProducts($tl);
 
         $valueType  = Index::getTypeOfProducts($tl);
+        $typeInProductPage = Index::getTypeOfProductsIndex();
+        $getMinPrice = Products::MinPrice();
+        $getMaxPrice = Products::MaxPrice();
+
+
         return view('layouts/products')->with('valueProducts',$valueProducts)
-                                             ->with('valueType',$valueType);
+                                             ->with('valueType',$valueType)
+                                             ->with('typeInProductPage', $typeInProductPage)
+                                             ->with('getMinPrice', $getMinPrice)
+                                             ->with('getMaxPrice', $getMaxPrice);
+    }
+    //search value
+
+    public static function getValueKeySearch(Request $req) {
+        $getValue = Products::SearchProduct($req->keysearch);
+        return view('layouts/products')->with('value',$getValue);
     }
 
 

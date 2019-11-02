@@ -95,5 +95,11 @@
 .fa-arrow-right {
     font-size: 20px !important;
 }
-
+/* order */
+.padding-15 {
+    padding: 15px !important;
+}
+.name {
+    font-size: 30px !important;
+}
 

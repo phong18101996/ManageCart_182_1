@@ -70,3 +70,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 //search product
 
 Route::get('keysearch={keyword}','ProductsController@getValueKeySearch');
+
+Route::get('/order', function () {
+    return view('layouts/order');
+});
+
+Route::get('/order-detail', function () {
+    return view('layouts/order-detail');
+});

@@ -96,6 +96,7 @@
 
                     <div class="w3-dropdown-content w3-bar-block w3-border bannel-dropdown">
                         <a href="logout" class="w3-bar-item w3-button dropdown-iterms">Quản Lý Tài Khoản</a>
+                        <a href="/order/{{Auth::user()->id}}" class="w3-bar-item w3-button dropdown-iterms">Quản Lý Đơn Hàng</a>
                         <a href="logout" class="w3-bar-item w3-button dropdown-iterms">Đăng Xuất</a>
                         <input type="hidden" value="{{Auth::user()->id}}" name="id_users">
 
